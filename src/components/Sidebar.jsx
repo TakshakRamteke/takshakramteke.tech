@@ -5,7 +5,134 @@ export default function Sidebar({ title }) {
 
   return (
     <nav className='w-full h-8 border-b lg:border-b-0 lg:w-11 lg:h-screen lg:border-l border-black lg:py-4 flex lg:flex-col items-center animate-fadein lg:animate-movedown'>
-      <div className='font-inter pl-4 pr-4 py-1 font-bold uppercase lg:rotate-90 lg:mt-14 lg:text-2xl border-r border-black lg:px-8'>
+      <div
+        className={`${
+          open
+            ? "bg-black z-10 shadow rounded-md w-full h-screen p-4 px-7 mt-auto rounded-tl-none rounded-bl-none animate-moveright"
+            : "hidden"
+        }`}>
+        {/* Homepage link */}
+        <div className='text-white flex flex-col h-full'>
+          <a href='/' className='text-white underline font-inter'>
+            takshakramteke.tech
+          </a>
+
+          {/* Nav section */}
+          <ul className='mt-14'>
+            <li>
+              <a
+                href='/blogs'
+                className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
+                Blog's
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-8 h-8 ml-2'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href='projects'
+                className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
+                Project's
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-8 h-8 ml-2'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href='designs'
+                className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
+                Design's
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-8 h-8 ml-2'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href='/about'
+                className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
+                About
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-8 h-8 ml-2'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href='contact'
+                className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
+                contact
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-8 h-8 ml-2'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          {/* Decoration material */}
+          <div className='mt-auto ml-auto'>
+            <p className='text-right text-[.6rem]'>2022 ©</p>
+            <img src='/assets/trademark.svg' className='w-[155px]' />
+          </div>
+        </div>
+      </div>
+      <div className='font-inter pl-4 pr-4 py-1 font-bold uppercase lg:rotate-90 lg:mt-14 lg:text-2xl border-r border-black lg:px-8 fixed'>
         {title}
       </div>
       <div
