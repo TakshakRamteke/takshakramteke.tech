@@ -13,13 +13,13 @@ const { title } = Astro.props;
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body class='bg-white flex lg:flex-row-reverse flex-col overflow-hidden'>
     <Sidebar title={title} client:load />
-    <div class='p-4 lg:p-8 w-full h-[96.3vh] lg:h-screen ml-auto'>
+    <div class='p-2 lg:p-4 w-full h-[96.3vh] lg:h-screen ml-auto'>
       <div
         class='w-full h-[100%] p-2 border border-black rounded animate-moveup'
       >

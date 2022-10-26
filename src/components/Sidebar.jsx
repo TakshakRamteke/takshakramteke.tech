@@ -13,8 +13,11 @@ export default function Sidebar({ title }) {
         }`}>
         {/* Homepage link */}
         <div className='text-white flex flex-col h-full'>
-          <a href='/' className='text-white underline font-inter'>
+          <a
+            href='/'
+            className='text-white underline font-inter flex items-end'>
             takshakramteke.tech
+            <img src='/favicon.svg' className='w-6 h-6 ml-auto' />
           </a>
 
           {/* Nav section */}
@@ -84,6 +87,27 @@ export default function Sidebar({ title }) {
 
             <li>
               <a
+                href='testimonials'
+                className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
+                Testimonials
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='w-8 h-8 ml-2'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3'
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
                 href='/about'
                 className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
                 About
@@ -132,7 +156,10 @@ export default function Sidebar({ title }) {
           </div>
         </div>
       </div>
-      <div className='font-inter pl-4 pr-4 py-1 font-bold uppercase lg:rotate-90 lg:mt-14 lg:text-2xl border-r border-black lg:px-8 fixed'>
+      <div
+        className={`font-inter pl-4 pr-4 py-1 font-bold uppercase lg:rotate-90 ${
+          title == "Testimonials" ? "lg:mt-20" : "lg:mt-14"
+        } lg:text-2xl border-r border-black lg:px-8 fixed`}>
         {title}
       </div>
       <div
