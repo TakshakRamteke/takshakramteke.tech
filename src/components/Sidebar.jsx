@@ -17,7 +17,11 @@ export default function Sidebar({ title }) {
             href='/'
             className='text-white underline font-inter flex items-end'>
             takshakramteke.tech
-            <img src='/favicon.svg' className='w-6 h-6 ml-auto' />
+            <img
+              src='/favicon.svg'
+              className='w-6 h-6 ml-auto'
+              alt='brand logo'
+            />
           </a>
 
           {/* Nav section */}
@@ -152,7 +156,11 @@ export default function Sidebar({ title }) {
           {/* Decoration material */}
           <div className='mt-auto ml-auto'>
             <p className='text-right text-[.6rem]'>2022 ©</p>
-            <img src='/assets/trademark.svg' className='w-[155px]' />
+            <img
+              src='/assets/trademark.svg'
+              className='w-[155px]'
+              alt='Takshaks seal'
+            />
           </div>
         </div>
       </div>
