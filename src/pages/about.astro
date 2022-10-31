@@ -1,7 +1,90 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='About'>
-  <h1 class='font-bold font-inter text-2xl uppercase'>A Little About Me</h1>
+  <div class='p-1'>
+    <div class='flex border rounded border-black bg-black text-white shadow'>
+      <img
+        src='/mobile-pfp.jpg'
+        class='lg:hidden w-[100px] h-[100px] rounded-sm grayscale'
+      />
+      <div class='pl-3 py-1'>
+        <h1 class='font-bold text-2xl h-fit w-max'>Takshak Ramteke</h1>
+        <p class='text-sm italic'>
+          <a class='text-slate-500'>@TakshakRamteke</a>
+        </p>
+        <p class='italic text-sm'>Freelance FullStack Dev & Designer</p>
+      </div>
+    </div>
+
+    <p class='mt-4 text-justify text-md border p-2 rounded border-black'>
+      Hello There !, nice to see you
+      <br />
+      I'm a 21 year old fun loving, enthusiastic & passionate Developer and Designer
+      who loves Open source & free software stuff (obviously, \_(-_-)_/ ), other
+      than that I also like anime + manga + webtoons+ memes (cat/anime/linux)
+      <br />
+      I Currently work as a freelance fullstack developer and designer, professiant
+      with tools like Next.js, TypeScript, prisma, etc. along with design tools like
+      Figma, Inkscape & GIMP although Next.js (for dev) and Inkscape (for design)
+      are my favourite ones
+      <br />
+      I am also currently pursuing my Bachelors in computer science and engineering
+      (senior year),
+      <br />
+      Please feel free to look at my work or reach out to me any time
+    </p>
+
+    <div class='mt-4 p-2 rounded border border-black'>
+      <h2 class='text-xl font-semibold uppercase'>Tech & skill's</h2>
+      <ul class='mt-4 px-1 flex flex-wrap justify-between text-sm'>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          Next.js
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          astro
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          React.js
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          Tailwind CSS
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          prisma
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          MySQL
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          mongodb
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          graphQl
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          contentful
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          Figma
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          GitHub
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          TypeScript
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          JavaScript
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          python
+        </li>
+        <li class='p-1 px-2 m-1 border border-black rounded-full w-fit'>
+          golang
+        </li>
+      </ul>
+    </div>
+  </div>
 </Layout>
