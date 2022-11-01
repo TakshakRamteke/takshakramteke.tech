@@ -1,7 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+
+const blogs = await Astro.glob('./blogs/*.md');
 ---
 
 <Layout title='Welcome'>
   <h1 class='font-bold font-inter text-2xl uppercase'>Table of contents</h1>
+  <h1>Blogs :</h1>
+  {
+    blogs.map((blog) => (
+      <a href={blog.url}>
+        <h3>{blog.frontmatter.title}</h3>
+      </a>
+    ))
+  }
 </Layout>
