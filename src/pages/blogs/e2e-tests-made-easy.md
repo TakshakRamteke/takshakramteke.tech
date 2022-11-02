@@ -4,6 +4,7 @@ title: '🧪 E2E tests made easy with Cypress + Cucumber'
 cover: '/assets/blogs/e2e-blog-cover.png'
 author: 'Takshak Ramteke'
 date: '1-July-2022'
+backLink: '/blogs'
 ---
 
 If you're a developer I'm pretty sure end to end testing is something you've heard about a lot

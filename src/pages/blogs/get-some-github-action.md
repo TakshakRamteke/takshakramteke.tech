@@ -4,6 +4,7 @@ title: '🗿 Get Some (Github) Actions'
 cover: '/assets/blogs/get-some-github-action.png'
 author: 'Takshak Ramteke'
 date: '15-Aug-2022'
+backLink: '/blogs'
 ---
 
 **Github Actions**, If you haven't heard about already then please allow me tell you calling it amazing would be an understatement !
