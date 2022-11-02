@@ -2,16 +2,30 @@
 import Layout from '../layouts/Layout.astro';
 
 const blogs = await Astro.glob('./blogs/*.md');
+const designs = await Astro.glob('./designs/*.md');
 ---
 
 <Layout title='Welcome'>
   <h1 class='font-bold font-inter text-2xl uppercase'>Table of contents</h1>
-  <h1>Blogs :</h1>
-  {
-    blogs.map((blog) => (
-      <a href={blog.url}>
-        <h3>{blog.frontmatter.title}</h3>
-      </a>
-    ))
-  }
+  <h2 class='text-xl font-semibold my-3'>Blogs :</h2>
+  <div class='text-sm'>
+    {
+      blogs.map((blog) => (
+        <a href={blog.url} class='italic my-2 text-slate-700'>
+          <h3 class='my-1 hover:underline'>{blog.frontmatter.title} </h3>
+        </a>
+      ))
+    }
+  </div>
+
+  <h2 class='text-xl font-semibold my-3'>Designs :</h2>
+  <div class='text-sm'>
+    {
+      designs.map((design) => (
+        <a href={design.url} class='italic my-2 text-slate-700 '>
+          <h3 class='my-1'>{design.frontmatter.title} </h3>
+        </a>
+      ))
+    }
+  </div>
 </Layout>
