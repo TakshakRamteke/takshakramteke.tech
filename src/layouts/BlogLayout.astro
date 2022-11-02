@@ -1,0 +1,89 @@
+---
+import Layout from './Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title='Blogs'>
+  <div class='lg:flex lg:flex-col lg:items-center lg:w-full lg:justify-center'>
+    <div class='lg:flex lg:flex-col lg:w-1/3'>
+      <a
+        class='flex items-center text-sm text-purple-600 mb-2 mr-auto'
+        href='/blogs'
+      >
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke-width='1.5'
+          stroke='currentColor'
+          class='w-5 h-5'
+        >
+          <path
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            d='M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18'></path>
+        </svg>
+        Back
+      </a>
+      <img src={frontmatter.cover} class='mb-2' />
+      <h1 class='text-2xl font-bold'>{frontmatter.title}</h1>
+      <div class='flex items-center my-2'>
+        <span class='text-sm text-right italic text-gray-600'>
+          By : {frontmatter.author}
+        </span>
+        <span class='text-sm text-right italic text-gray-600 ml-auto'>
+          {frontmatter.date}
+        </span>
+      </div>
+      <slot />
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  img {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+  }
+  strong {
+    font-size: 1.1rem;
+  }
+  .astro-code {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+    background-color: #08090a;
+  }
+  .astro-code code {
+    font-style: normal;
+    font-size: 0.8rem;
+    background-color: #08090a;
+  }
+  code {
+    font-style: italic;
+    font-size: 0.9rem;
+    background-color: #e2e8f0;
+    padding: 0.2rem;
+  }
+  blockquote {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    background-color: #f1f5f9;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #64748b;
+    color: #1e293b;
+  }
+</style>

@@ -11,18 +11,18 @@ const blogs = await Astro.glob<Frontmatter>('./*.md');
 ---
 
 <Layout title='Blogs'>
-  <h1 class='font-bold font-inter text-2xl uppercase'>Some Blog's</h1>
-  <div class='mt-4'>
+  <h1 class='font-bold font-inter text-2xl uppercase'>Some of my Blog's</h1>
+  <div class='mt-4 lg:flex'>
     {
       blogs.map((blog) => (
-        <div class='max-w-[20rem] p-2 m-1 border rounded border-black'>
+        <div class='max-w-[20rem] p-2 m-1 border rounded border-black mb-3 lg:mr-2'>
           <img src={blog.frontmatter.cover} />
-          <a href={blog.url} class=''>
+          <a href={blog.url}>
             <h1 class='font-semibold text-lg hover:underline hover:text-purple-800 mt-1'>
               {blog.frontmatter.title}
             </h1>
           </a>
-          <div class='flex items-center'>
+          <div class='flex items-center mt-1'>
             <p class='text-sm text-right italic text-gray-600 '>
               By : {blog.frontmatter.author}
             </p>
