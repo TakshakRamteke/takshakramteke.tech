@@ -5,6 +5,7 @@ cover: '/assets/designs/berserk-tribute.png'
 author: 'Takshak Ramteke'
 date: '29-Aug-2022'
 backLink: '/designs'
+downloadLink: 'https://res.cloudinary.com/dashcord/image/upload/v1667583608/Designs/berserk-tribute_u2krfj.png'
 ---
 
 Made this as a tribute to late `Mr.kentaro miura`, artist and author to one of the best manga i've ever read so far
