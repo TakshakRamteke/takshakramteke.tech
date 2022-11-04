@@ -1,7 +1,39 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from '../../layouts/Layout.astro';
+interface Frontmatter {
+  title: string;
+  description: string;
+  cover: string;
+  author: string;
+  date: string;
+}
+
+const projects = await Astro.glob<Frontmatter>('./*.md');
 ---
 
 <Layout title='Projects'>
   <h1 class='font-bold font-inter text-2xl uppercase'>Product's im proud of</h1>
+  <div class='mt-4 lg:flex'>
+    {
+      projects.map((project) => (
+        <div class='max-w-[20rem] p-2 m-1 border rounded border-black mb-3 lg:mr-2'>
+          {project.frontmatter.cover && <img src={project.frontmatter.cover} />}
+          <a href={project.url}>
+            <h1 class='font-semibold text-lg hover:underline hover:text-purple-800'>
+              {project.frontmatter.title}
+            </h1>
+          </a>
+          <span class='italic text-md'>{`"${project.frontmatter.description}"`}</span>
+          <div class='flex items-center'>
+            <p class='text-sm text-right italic text-gray-600 '>
+              By : {project.frontmatter.author}
+            </p>
+            <p class='text-sm text-right italic text-gray-600 ml-auto'>
+              {project.frontmatter.date}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </Layout>
