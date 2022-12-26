@@ -49,7 +49,7 @@ export default function Sidebar({ title }) {
 
             <li>
               <a
-                href='projects'
+                href='/projects'
                 className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
                 Project's
                 <svg
@@ -70,7 +70,7 @@ export default function Sidebar({ title }) {
 
             <li>
               <a
-                href='designs'
+                href='/designs'
                 className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
                 Design's
                 <svg
@@ -91,7 +91,7 @@ export default function Sidebar({ title }) {
 
             <li>
               <a
-                href='testimonials'
+                href='/testimonials'
                 className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
                 Testimonials
                 <svg
@@ -133,7 +133,7 @@ export default function Sidebar({ title }) {
 
             <li>
               <a
-                href='contact'
+                href='/contact'
                 className='flex items-center font-inter uppercase text-3xl my-1 hover:underline'>
                 contact
                 <svg
