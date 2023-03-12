@@ -4,7 +4,7 @@ export default function Sidebar({ title }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="flex h-11 w-full animate-movedown items-center rounded-sm border-b border-black p-2 font-sans lg:h-screen lg:w-11 lg:flex-col lg:border-b-0 lg:border-l">
+    <nav className="sticky top-0 flex h-11 w-full animate-movedown items-center rounded-sm border-b border-black p-2 font-sans backdrop-blur-md lg:h-screen lg:w-11 lg:flex-col lg:border-b-0 lg:border-l">
       {open ? (
         <div
           className={`fixed inset-0 h-screen w-screen animate-moveright bg-black p-4`}
@@ -34,7 +34,7 @@ export default function Sidebar({ title }) {
             </svg>
           </div>
 
-          <div className="mt-10 text-3xl uppercase text-white">
+          <div className="mt-10 text-3xl uppercase italic text-white">
             <ul>
               <li className="flex items-center">
                 <a href="/blogs" className="hover:underline">
