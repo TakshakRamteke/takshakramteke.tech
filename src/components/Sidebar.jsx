@@ -4,9 +4,11 @@ export default function Sidebar({ title }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="flex h-11 w-full animate-movedown items-center rounded-sm border-b border-black p-2 lg:h-screen lg:w-11 lg:flex-col lg:border-b-0 lg:border-l">
+    <nav className="flex h-11 w-full animate-movedown items-center rounded-sm border-b border-black p-2 font-sans lg:h-screen lg:w-11 lg:flex-col lg:border-b-0 lg:border-l">
       {open ? (
-        <div className={`fixed inset-0 h-screen w-screen bg-black p-4`}>
+        <div
+          className={`fixed inset-0 h-screen w-screen animate-moveright bg-black p-4`}
+        >
           {/* <img src="/favicon.svg" className="w-1/12" /> */}
           <div className="flex items-center">
             <a
