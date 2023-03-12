@@ -7,7 +7,7 @@ export default function Sidebar({ title }) {
     <nav className="sticky top-0 flex h-11 w-full animate-movedown items-center rounded-sm border-b border-black p-2 font-sans backdrop-blur-md lg:h-screen lg:w-11 lg:flex-col lg:border-b-0 lg:border-l">
       {open ? (
         <div
-          className={`fixed inset-0 h-screen w-screen animate-moveright bg-black p-4`}
+          className={`fixed top-0 bottom-0 right-0 h-screen w-screen animate-moveright overflow-hidden bg-black p-4`}
         >
           {/* <img src="/favicon.svg" className="w-1/12" /> */}
           <div className="flex items-center">
