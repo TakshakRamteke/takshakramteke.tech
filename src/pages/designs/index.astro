@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 interface Frontmatter {
   title: string;
   cover: string;
@@ -7,26 +7,26 @@ interface Frontmatter {
   date: string;
 }
 
-const designs = await Astro.glob<Frontmatter>('./*.md');
+const designs = await Astro.glob<Frontmatter>("./*.md");
 ---
 
-<Layout title='Designs'>
-  <h1 class='font-bold font-inter text-2xl uppercase'>Some of my Design's</h1>
-  <div class='mt-4 lg:flex'>
+<Layout title="Designs">
+  <h1 class="font-inter text-2xl font-bold uppercase">Some of my Design's</h1>
+  <div class="mt-4 grid place-items-center lg:flex lg:place-items-stretch">
     {
       designs.map((design) => (
-        <div class='max-w-[20rem] p-2 m-1 border rounded border-black mb-3 lg:mr-2'>
+        <div class="m-1 mb-3 max-w-[20rem] rounded border border-black p-2 lg:mr-2">
           <img src={design.frontmatter.cover} />
           <a href={design.url}>
-            <h1 class='font-semibold text-lg hover:underline hover:text-purple-800'>
+            <h1 class="text-lg font-semibold hover:text-purple-800 hover:underline">
               {design.frontmatter.title}
             </h1>
           </a>
-          <div class='flex items-center'>
-            <p class='text-sm text-right italic text-gray-600 '>
+          <div class="flex items-center">
+            <p class="text-right text-sm italic text-gray-600 ">
               By : {design.frontmatter.author}
             </p>
-            <p class='text-sm text-right italic text-gray-600 ml-auto'>
+            <p class="ml-auto text-right text-sm italic text-gray-600">
               {design.frontmatter.date}
             </p>
           </div>

@@ -12,7 +12,7 @@ const blogs = await Astro.glob<Frontmatter>("./*.md");
 
 <Layout title="Blogs">
   <h1 class="font-inter text-2xl font-bold uppercase">Some of my Blog's</h1>
-  <div class="mt-4 lg:flex">
+  <div class="mt-4 grid place-items-center lg:flex lg:place-items-stretch">
     {
       blogs.map((blog) => (
         <div class="m-1 mb-3 max-w-[20rem] rounded border border-black p-2 lg:mr-2">
