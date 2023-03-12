@@ -1,12 +1,158 @@
 import { useState } from "react";
 
 export default function Sidebar({ title }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <nav className="flex h-11 w-full animate-movedown items-center rounded-sm border-b border-black p-2 lg:h-screen lg:w-11 lg:flex-col lg:border-b-0 lg:border-l">
       {open ? (
-        <div className={`fixed inset-0 h-screen w-screen bg-black`}></div>
+        <div className={`fixed inset-0 h-screen w-screen bg-black p-4`}>
+          {/* <img src="/favicon.svg" className="w-1/12" /> */}
+          <div className="flex items-center">
+            <a
+              className="text-xs font-medium uppercase text-white underline hover:text-purple-600 lg:text-sm"
+              href="/"
+            >
+              takshakramteke.github.io
+            </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="white"
+              className="ml-auto h-7 w-7 lg:hidden"
+              onClick={() => setOpen(!open)}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+
+          <div className="mt-10 text-3xl uppercase text-white">
+            <ul>
+              <li className="flex items-center">
+                <a href="/blogs" className="hover:underline">
+                  Blogs
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="ml-2 h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </li>
+              <li className="mt-2 flex items-center">
+                <a href="/designs" className="hover:underline">
+                  Designs
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="ml-2 h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </li>
+              <li className="mt-2 flex items-center">
+                <a href="/projects" className="hover:underline">
+                  Projects
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="ml-2 h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </li>
+              <li className="mt-2 flex items-center">
+                <a href="/testimonials" className="hover:underline">
+                  Testimonials
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="ml-2 h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </li>
+              <li className="mt-2 flex items-center">
+                <a href="/about" className="hover:underline">
+                  About
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="ml-2 h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </li>
+              <li className="mt-2 flex items-center">
+                <a href="/contact" className="hover:underline">
+                  Contact
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="ml-2 h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
+
+          <div></div>
+        </div>
       ) : null}
 
       <div
@@ -25,7 +171,7 @@ export default function Sidebar({ title }) {
 
       <div
         className={`ml-auto border-l border-black py-1 pl-2 pt-2 lg:mt-auto lg:border-l-0 lg:border-t lg:pl-0 ${
-          open ? "z-10 border-white text-white" : ""
+          open ? "border-white text-white lg:z-10" : ""
         }`}
       >
         <svg
