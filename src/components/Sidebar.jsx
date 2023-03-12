@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Sidebar({ title }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <nav className="flex h-11 w-full animate-movedown items-center rounded-sm border-b border-black p-2 lg:h-screen lg:w-11 lg:flex-col lg:border-b-0 lg:border-l">
@@ -164,7 +164,7 @@ export default function Sidebar({ title }) {
             : "lg:h-40"
         } ${open ? "text-white" : ""}`}
       >
-        <p className="pr-2 text-center font-inter font-semibold uppercase lg:rotate-90 lg:p-1 lg:pr-0 lg:text-xl">
+        <p className="font-inter pr-2 text-center font-semibold uppercase lg:rotate-90 lg:p-1 lg:pr-0 lg:text-xl">
           {title}
         </p>
       </div>
