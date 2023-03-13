@@ -12,10 +12,12 @@ const blogs = await Astro.glob<Frontmatter>("./*.md");
 
 <Layout title="Blogs">
   <h1 class="font-inter text-2xl font-bold uppercase">Some of my Blog's</h1>
-  <div class="mt-4 grid place-items-center lg:flex lg:place-items-stretch">
+  <div
+    class="mt-4 grid place-items-center lg:flex lg:flex-wrap lg:place-items-stretch lg:justify-between"
+  >
     {
       blogs.map((blog) => (
-        <div class="m-1 mb-3 max-w-[20rem] rounded border border-black p-2 lg:mr-2">
+        <div class="m-1 mb-3 max-w-[23.9rem] shrink-0 rounded border border-black p-2 lg:mr-2">
           <img src={blog.frontmatter.cover} />
           <a href={blog.url}>
             <h1 class="mt-1 text-lg font-semibold hover:text-purple-800 hover:underline">
