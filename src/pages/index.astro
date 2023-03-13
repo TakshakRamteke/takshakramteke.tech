@@ -1,31 +1,242 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-const blogs = await Astro.glob('./blogs/*.md');
-const designs = await Astro.glob('./designs/*.md');
+const blogs = await Astro.glob("./blogs/*.md");
+const designs = await Astro.glob("./designs/*.md");
 ---
 
-<Layout title='Welcome'>
-  <h1 class='font-bold font-inter text-2xl uppercase'>Table of contents</h1>
-  <h2 class='text-xl font-semibold my-3'>Blogs :</h2>
-  <div class='text-sm'>
-    {
-      blogs.map((blog) => (
-        <a href={blog.url} class='italic my-2 text-slate-700'>
-          <h3 class='my-1 hover:underline'>{blog.frontmatter.title} </h3>
-        </a>
-      ))
-    }
+<Layout title="Welcome">
+  <div class="rounded border border-black bg-pink-600 p-1 lg:w-1/4">
+    <p class="text-6xl font-semibold">I'm, Takshak Ramteke</p>
   </div>
 
-  <h2 class='text-xl font-semibold my-3'>Designs :</h2>
-  <div class='text-sm'>
-    {
-      designs.map((design) => (
-        <a href={design.url} class='italic my-2 text-slate-700 '>
-          <h3 class='my-1'>{design.frontmatter.title} </h3>
-        </a>
-      ))
-    }
+  <div class="flex flex-wrap items-center text-sm italic">
+    <p class="shrink-0 rounded-full border border-black px-2">
+      Fullstack Freelance Developer
+    </p>
+    <p class="ml-1 shrink-0 rounded-full border border-black px-2">
+      Web Designer
+    </p>
+    <p class="mt-0 shrink-0 rounded-full border border-black px-2">
+      Graphic Designer
+    </p>
+    <p class="ml-1 mt-0 shrink-0 rounded-full border border-black px-2">
+      Digital Artist
+    </p>
+    <p class="ml-1 mt-0 shrink-0 rounded-full border border-black px-2">
+      Next.js
+    </p>
+  </div>
+
+  <div class="my-2 mt-0 rounded border border-black p-1 lg:w-fit">
+    <h1 class="text-2xl font-bold uppercase">Table of contents</h1>
+    <h2 class="my-3 text-xl font-semibold">Blogs :</h2>
+    <div class="text-sm">
+      {
+        blogs.map((blog) => (
+          <a href={blog.url} class="my-2 italic text-slate-700">
+            <h3 class="my-1 hover:underline">{blog.frontmatter.title} </h3>
+          </a>
+        ))
+      }
+    </div>
+
+    <h2 class="my-3 text-xl font-semibold">Designs :</h2>
+    <div class="text-sm">
+      {
+        designs.map((design) => (
+          <a href={design.url} class="my-2 italic text-slate-700 ">
+            <h3 class="my-1">{design.frontmatter.title} </h3>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="mb-2 rounded bg-black p-2 text-white">
+    <p class="mb-0 mt-0 text-2xl font-semibold">Contact's</p>
+    <div
+      class="my-2 flex flex-wrap items-center text-sm italic lg:justify-between"
+    >
+      <a
+        class="flex shrink-0 items-center rounded-full border border-white px-2"
+        href="https://github.com/TakshakRamteke"
+        target="_blank"
+        >GitHub
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-1 h-4 w-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+        </svg>
+      </a>
+
+      <a
+        class="ml-1.5 flex shrink-0 items-center rounded-full border border-white px-2"
+        href="mailto:takshakramteke0708@mail.com"
+        target="_blank"
+        >Email
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-1 h-4 w-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+        </svg>
+      </a>
+
+      <a
+        class="ml-1.5 flex shrink-0 items-center rounded-full border border-white px-2"
+        href="https://www.linkedin.com/in/takshak-ramteke-15b840206/"
+        target="_blank"
+        >LinkedIn
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-1 h-4 w-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+        </svg>
+      </a>
+
+      <a
+        class="mt-1.5 flex shrink-0 items-center rounded-full border border-white px-2"
+        href="https://www.showwcase.com/takshakramteke"
+        target="_blank"
+        >Showwcase
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-1 h-4 w-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+        </svg>
+      </a>
+
+      <a
+        class="mt-1.5 ml-1.5 flex shrink-0 items-center rounded-full border border-white px-2"
+        href="https://dribbble.com/TakshakRamteke"
+        target="_blank"
+        >Dribble
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-1 h-4 w-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+        </svg>
+      </a>
+
+      <a
+        class="mt-1.5 ml-1.5 flex shrink-0 items-center rounded-full border border-white px-2"
+        href="https://www.behance.net/takshakramteke"
+        target="_blank"
+        >Behance
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-1 h-4 w-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+        </svg>
+      </a>
+
+      <a
+        class="mt-1.5 flex shrink-0 items-center rounded-full border border-white px-2"
+        href="https://twitter.com/TakshakRamteke"
+        target="_blank"
+        >Twitter
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-1 h-4 w-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+        </svg>
+      </a>
+
+      <a
+        class="mt-1.5 flex shrink-0 items-center rounded-full border border-white px-2"
+        href="https://dev.to/takshakramteke"
+        target="_blank"
+        >Dev.to
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-1 h-4 w-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+        </svg>
+      </a>
+
+      <a
+        class="mt-1.5 ml-1.5 flex shrink-0 items-center rounded-full border border-white px-2"
+        href="https://hashnode.com/@TakshakRamteke"
+        target="_blank"
+        >Hashnode
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-1 h-4 w-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+        </svg>
+      </a>
+    </div>
   </div>
 </Layout>
