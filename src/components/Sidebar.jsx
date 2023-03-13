@@ -7,13 +7,14 @@ export default function Sidebar({ title }) {
     <nav className="sticky top-0 flex h-11 w-full animate-movedown items-center rounded-sm border-b border-black p-2 font-sans backdrop-blur-md lg:h-screen lg:w-11 lg:flex-col lg:border-b-0 lg:border-l">
       {open ? (
         <div
-          className={`fixed top-0 bottom-0 right-0 h-screen w-screen animate-moveright overflow-hidden bg-black p-4`}
+          className={`fixed top-0 bottom-0 right-0 z-10 flex h-screen w-screen animate-moveright flex-col overflow-y-hidden bg-black p-4`}
         >
           {/* <img src="/favicon.svg" className="w-1/12" /> */}
           <div className="flex items-center">
             <a
               className="text-xs font-medium uppercase text-white underline hover:text-purple-600 lg:text-sm"
               href="/"
+              style={{ fontFamily: "IBM Plex Sans" }}
             >
               takshakramteke.github.io
             </a>
@@ -23,7 +24,7 @@ export default function Sidebar({ title }) {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="white"
-              className="ml-auto h-7 w-7 lg:hidden"
+              className="ml-auto h-7 w-7 animate-fadein lg:hidden"
               onClick={() => setOpen(!open)}
             >
               <path
@@ -34,9 +35,12 @@ export default function Sidebar({ title }) {
             </svg>
           </div>
 
-          <div className="mt-10 text-3xl uppercase italic text-white">
+          <div
+            className="mt-10 text-3xl text-white"
+            style={{ fontFamily: "IBM Plex Sans" }}
+          >
             <ul>
-              <li className="flex items-center">
+              <li className="flex items-center bg-black">
                 <a href="/blogs" className="hover:underline">
                   Blogs
                 </a>
@@ -55,7 +59,7 @@ export default function Sidebar({ title }) {
                   />
                 </svg>
               </li>
-              <li className="mt-2 flex items-center">
+              <li className="flex items-center bg-black pt-2">
                 <a href="/designs" className="hover:underline">
                   Designs
                 </a>
@@ -74,7 +78,7 @@ export default function Sidebar({ title }) {
                   />
                 </svg>
               </li>
-              <li className="mt-2 flex items-center">
+              <li className="flex items-center bg-black pt-2">
                 <a href="/projects" className="hover:underline">
                   Projects
                 </a>
@@ -93,7 +97,7 @@ export default function Sidebar({ title }) {
                   />
                 </svg>
               </li>
-              <li className="mt-2 flex items-center">
+              <li className="flex items-center bg-black pt-2">
                 <a href="/testimonials" className="hover:underline">
                   Testimonials
                 </a>
@@ -112,7 +116,7 @@ export default function Sidebar({ title }) {
                   />
                 </svg>
               </li>
-              <li className="mt-2 flex items-center">
+              <li className="flex items-center bg-black pt-2">
                 <a href="/about" className="hover:underline">
                   About
                 </a>
@@ -131,7 +135,7 @@ export default function Sidebar({ title }) {
                   />
                 </svg>
               </li>
-              <li className="mt-2 flex items-center">
+              <li className="flex items-center bg-black pt-2">
                 <a href="/contact" className="hover:underline">
                   Contact
                 </a>
