@@ -1,16 +1,58 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import pfp from "../../public/mobile-pfp.jpg";
 
 const blogs = await Astro.glob("./blogs/*.md");
 const designs = await Astro.glob("./designs/*.md");
 ---
 
 <Layout title="Welcome">
-  <div class="rounded border border-black bg-pink-600 p-1 lg:w-1/4">
-    <p class="text-6xl font-semibold">I'm, Takshak Ramteke</p>
+  <div class="grid gap-2 md:grid-cols-2">
+    <div class="flex flex-col rounded border border-black bg-pink-600 p-1">
+      <p class="text-7xl font-semibold lg:text-9xl">
+        I'm, <br />Takshak <br />Ramteke
+      </p>
+      <div>
+        <div class="flex flex-wrap items-center text-sm italic">
+          <p class="shrink-0 rounded-full border border-black px-2">
+            Fullstack Freelance Developer
+          </p>
+          <p class="ml-1 shrink-0 rounded-full border border-black px-2">
+            Web Designer
+          </p>
+        </div>
+
+        <img src={pfp} class="w-full border border-black sm:w-fit" />
+      </div>
+    </div>
+
+    <div class="h-fit w-full rounded border border-black p-1 lg:mt-0">
+      <h1 class="text-2xl font-bold uppercase">Table of contents</h1>
+      <h2 class="my-3 text-xl font-semibold">Blogs :</h2>
+      <div class="text-sm lg:text-base">
+        {
+          blogs.map((blog) => (
+            <a href={blog.url} class="my-2 italic text-slate-700">
+              <h3 class="my-1 hover:underline">{blog.frontmatter.title} </h3>
+            </a>
+          ))
+        }
+      </div>
+
+      <h2 class="my-3 text-xl font-semibold">Designs :</h2>
+      <div class="text-sm lg:text-base">
+        {
+          designs.map((design) => (
+            <a href={design.url} class="my-2 italic text-slate-700 ">
+              <h3 class="my-1">{design.frontmatter.title} </h3>
+            </a>
+          ))
+        }
+      </div>
+    </div>
   </div>
 
-  <div class="flex flex-wrap items-center text-sm italic">
+  <!-- <div class="flex flex-wrap items-center text-sm italic">
     <p class="shrink-0 rounded-full border border-black px-2">
       Fullstack Freelance Developer
     </p>
@@ -26,9 +68,9 @@ const designs = await Astro.glob("./designs/*.md");
     <p class="ml-1 mt-0 shrink-0 rounded-full border border-black px-2">
       Next.js
     </p>
-  </div>
+  </div> -->
 
-  <div class="my-2 mt-0 rounded border border-black p-1 lg:w-fit">
+  <!-- <div class="my-2 mt-0 rounded border border-black p-1 lg:w-fit">
     <h1 class="text-2xl font-bold uppercase">Table of contents</h1>
     <h2 class="my-3 text-xl font-semibold">Blogs :</h2>
     <div class="text-sm">
@@ -51,9 +93,9 @@ const designs = await Astro.glob("./designs/*.md");
         ))
       }
     </div>
-  </div>
+  </div> -->
 
-  <div class="mb-2 rounded bg-black p-2 text-white">
+  <!-- <div class="mb-2 rounded bg-black p-2 text-white">
     <p class="mb-0 mt-0 text-2xl font-semibold">Contact's</p>
     <div
       class="my-2 flex flex-wrap items-center text-sm italic lg:justify-between"
@@ -237,6 +279,5 @@ const designs = await Astro.glob("./designs/*.md");
             d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
         </svg>
       </a>
-    </div>
-  </div>
+    </div> -->
 </Layout>
