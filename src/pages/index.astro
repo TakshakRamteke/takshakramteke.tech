@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import pfp from "/mobile-pfp.jpg";
 
 const blogs = await Astro.glob("./blogs/*.md");
 const designs = await Astro.glob("./designs/*.md");
@@ -24,7 +23,7 @@ const designs = await Astro.glob("./designs/*.md");
           </p>
         </div>
 
-        <img src={pfp} class="mt-0 w-full sm:w-1/3" />
+        <img src="/mobile-pfp.jpg" class="mt-2 w-full sm:w-1/3" />
       </div>
     </div>
 
