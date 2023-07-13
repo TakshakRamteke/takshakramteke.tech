@@ -8,7 +8,9 @@ const designs = await Astro.glob("./designs/*.md");
 
 <Layout title="Welcome">
   <div class="grid gap-2 md:grid-cols-2">
-    <div class="flex flex-col rounded border border-black bg-pink-600 p-1">
+    <div
+      class="flex flex-col rounded border border-black bg-pink-600 bg-[url('/texture.png')] p-1"
+    >
       <p class="text-7xl font-semibold lg:text-9xl">
         I'm, <br />Takshak <br />Ramteke
       </p>
@@ -22,7 +24,7 @@ const designs = await Astro.glob("./designs/*.md");
           </p>
         </div>
 
-        <img src={pfp} class="w-full border border-black sm:w-fit" />
+        <img src={pfp} class="mt-0 w-full sm:w-1/3" />
       </div>
     </div>
 
