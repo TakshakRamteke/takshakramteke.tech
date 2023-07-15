@@ -1,5 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import {Image} from "@astrojs/image/components"
+
 interface Frontmatter {
   title: string;
   cover: string;
@@ -16,7 +18,8 @@ const designs = await Astro.glob<Frontmatter>("./*.md");
     {
       designs.map((design) => (
         <div class="m-1 mb-3 max-w-[20rem] rounded border border-black p-2 lg:mr-2">
-          <img src={design.frontmatter.cover} />
+          {/*<img src={design.frontmatter.cover} />*/}
+          <Image src={design.frontmatter.cover} width={226} height={320} alt={design.frontmatter.title} class="h-auto"/>
           <a href={design.url}>
             <h1 class="text-lg font-semibold hover:text-purple-800 hover:underline">
               {design.frontmatter.title}
