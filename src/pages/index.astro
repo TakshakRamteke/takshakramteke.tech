@@ -27,10 +27,10 @@ const designs = await Astro.glob("./designs/*.md");
       </div>
     </div>
 
-    <div class="h-fit w-full rounded border border-black p-1 lg:mt-0">
-      <h1 class="text-2xl font-bold uppercase">Table of contents</h1>
-      <h2 class="my-3 text-xl font-semibold">Blogs :</h2>
-      <div class="text-sm lg:text-base">
+    <div class="h-fit w-full rounded border border-black p-3 lg:mt-0">
+      <h1 class="text-4xl font-bold uppercase">Table of contents</h1>
+      <h2 class="my-3 mt-4 text-3xl font-semibold">Blogs :</h2>
+      <div class="lg:text-lg">
         {
           blogs.map((blog) => (
             <a href={blog.url} class="my-2 italic text-slate-700">
@@ -40,8 +40,8 @@ const designs = await Astro.glob("./designs/*.md");
         }
       </div>
 
-      <h2 class="my-3 text-xl font-semibold">Designs :</h2>
-      <div class="text-sm lg:text-base">
+      <h2 class="my-3 mt-4 text-3xl font-semibold">Designs :</h2>
+      <div class="lg:text-lg">
         {
           designs.map((design) => (
             <a href={design.url} class="my-2 italic text-slate-700 ">
