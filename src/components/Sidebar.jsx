@@ -98,44 +98,6 @@ export default function Sidebar({ title }) {
                                 </svg>
                             </li>
                             <li className="flex items-center bg-black pt-2">
-                                <a href="/testimonials" className="hover:underline">
-                                    Testimonials
-                                </a>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={1.5}
-                                    stroke="currentColor"
-                                    className="ml-2 h-6 w-6"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                                    />
-                                </svg>
-                            </li>
-                            <li className="flex items-center bg-black pt-2">
-                                <a href="/about" className="hover:underline">
-                                    About
-                                </a>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={1.5}
-                                    stroke="currentColor"
-                                    className="ml-2 h-6 w-6"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                                    />
-                                </svg>
-                            </li>
-                            <li className="flex items-center bg-black pt-2">
                                 <a href="/contact" className="hover:underline">
                                     Contact
                                 </a>
