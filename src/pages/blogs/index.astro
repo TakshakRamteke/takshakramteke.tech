@@ -21,7 +21,7 @@ const blogs = await Astro.glob<Frontmatter>("./*.md");
       blogs.map((blog) => (
         <div class="m-1 mb-3 max-w-[23.9rem] shrink-0 rounded border border-black p-2 lg:mr-4">
           {/* <img src={blog.frontmatter.cover} /> */}
-          <Image src={blog.frontmatter.cover} width={273} height={154} alt={blog.frontmatter.title} class="h-auto" format="avif"/>
+          <Image src={blog.frontmatter.cover} width={273} height={154} alt={blog.frontmatter.title} class="h-auto w-full" format="avif"/>
           <a href={blog.url}>
             <h1 class="mt-1 text-lg font-semibold hover:text-purple-800 hover:underline">
               {blog.frontmatter.title}
