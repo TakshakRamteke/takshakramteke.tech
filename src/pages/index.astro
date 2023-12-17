@@ -3,11 +3,73 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Takshak Ramteke">
-    <div>
-        <h1 class="text-2xl mb-4 font-semibold">Takshak Ramteke</h1>
-        <p class="text-sm lg:text-lg font-mono">
-            I Love creating meaningful, scalable & robust (software) solutions, through experience, collaboration and a respository of skills
+    <div class="mb-7">
+        <h1 class="text-2xl mb-7 font-semibold">Takshak Ramteke</h1>
+        <p class="my-2 text-sm lg:text-lg">I am a Backend Dev who can do Frontend as well as UI design. I Love reading, playing chess & sketching/designing in my free time</p>
+        <p class="text-xs lg:text-lg italic text-gray-400">
+            "I Love creating meaningful, scalable & robust (software) solutions, through experience, collaboration and a respository of skills"
         </p>
+    </div>
+    <div class="flex flex-col lg:flex-row flex-wrap mb-7">
+        <!--Work Exp. section-->
+        <div class="mr-auto">
+            <p class="font-semibold text-gray-400 mb-5">Work Exp.</p>
+            <ul class="mb-7 w-max">
+                <li class="mb-5">
+                    <p>CMS Developer</p>
+                     <div class="flex items-center text-sm mt-2 text-gray-400">
+                        <p>FutureBridge</p>
+                        <p class="ml-auto">jul 2023 - present</p>
+                    </div>
+                    <p class="text-gray-400 mt-2 text-xs">Strapi, Next.js, graphQL, mySQL, TypeScript, php</p>
+                </li>
+                <li class="mb-5">
+                    <p>Associate Full Stack Developer (Freelance)</p>
+                    <div class="flex items-center text-sm mt-2 text-gray-400">
+                        <p>Rigle.co</p>
+                        <p class="ml-auto">feb 2022 - jul 2023</p>
+                    </div>
+                    <p class="text-gray-400 mt-2 text-xs">Next.js, React.js, TailwindCSS, REST, mySQL, TypeScript</p>
+                </li>
+                <li class="mb-5">
+                    <p>Freelance FullStack Developer</p>
+                    <div class="flex items-center text-sm mt-2 text-gray-400">
+                        <p>...</p>
+                        <p class="ml-auto">feb 2022 - jun 2023</p>
+                    </div>
+                    <p class="text-gray-400 mt-2 text-xs">Golang, TypeScript, Python, React Native, Figma, etc...</p>
+                </li>
+            </ul>
+        </div>
+        <div  class="h-auto mx-auto border-r border-gray-400 border-dashed hidden md:block"></div>
+        <!--Project's section-->
+        <div class="lg:ml-auto md:w-1/2">
+            <p class="font-semibold text-gray-400 mb-5">Projects</p>
+            <ul class="mb-7">
+                <li class="mb-5">
+                    <p>Budget-iii (B-3)</p>
+                     <div class="flex items-center text-sm mt-2 text-gray-400 overflow-clip">
+                        <p class="break-words"> 
+                            A user-friendly budgeting application using React Native, Expo, and SQLite.
+                            Implemented with a intuitive features set such as expense tracking, budget planning, etc, helping users effectively
+                            manage their finances
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-5">
+                    <p>Unit-7 (U7)</p>
+                    <div class="flex items-center text-sm mt-2 text-gray-400">
+                        <p>A flask like micro framework for developing webservers on microcontrollers running micropython 🐍</p>
+                    </div>
+                </li>
+                <li class="mb-5">
+                    <p>Dashcoord (DC-4)</p>
+                    <div class="flex items-center text-sm mt-2 text-gray-400">
+                        <p>A student performance monitoring application made specificly with considerations for general academic needs</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </Layout>
 
