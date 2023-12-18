@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const allBlogs = await Astro.glob("./blogs/*.md")
 ---
 
 <Layout title="Takshak Ramteke">
@@ -10,7 +11,8 @@ import Layout from '../layouts/Layout.astro';
             "I Love creating meaningful, scalable & robust (software) solutions, through experience, collaboration and a respository of skills"
         </p>
     </div>
-    <div class="flex flex-col lg:flex-row flex-wrap mb-7">
+
+    <div class="flex flex-col md:flex-row flex-wrap mb-4">
         <!--Work Exp. section-->
         <div class="mr-auto">
             <p class="font-semibold text-gray-400 mb-5">Work Exp.</p>
@@ -71,5 +73,24 @@ import Layout from '../layouts/Layout.astro';
             </ul>
         </div>
     </div>
+
+    <div>
+        <div class="flex items-center text-gray-400 mb-5">
+            <p class="font-semibold">Writing</p>
+            <a class="ml-auto font-normal">view all -></a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {allBlogs.slice(0,3).map(blog=>(
+                <div class="mb-2">
+                    <a>
+                        <p class="underline">{blog.frontmatter.title}</p>
+                    </a>
+                    <p class="lowercase mt-1 text-gray-400 text-sm">{blog.frontmatter.excrept} ...</p>
+                </div>
+            ))}
+        </div>
+    </div>
+
+
 </Layout>
 
