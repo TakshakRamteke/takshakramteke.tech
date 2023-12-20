@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const allBlogs = await Astro.glob("./blogs/*.md")
+const allDesigns = await Astro.glob("./designs/*.md")
 ---
 
 <Layout title="Takshak Ramteke">
@@ -74,7 +75,7 @@ const allBlogs = await Astro.glob("./blogs/*.md")
         </div>
     </div>
 
-    <div>
+    <div class="mb-5">
         <div class="flex items-center text-gray-400 mb-5">
             <p class="font-semibold">Writing</p>
             <a class="ml-auto font-normal">view all -></a>
@@ -91,6 +92,22 @@ const allBlogs = await Astro.glob("./blogs/*.md")
         </div>
     </div>
 
+    <div class="mb-5">
+        <div class="flex items-center text-gray-400 mb-5">
+            <p class="font-semibold">Designs</p>
+            <a class="ml-auto font-normal">view all -></a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {allDesigns.slice(0,3).map(design=>(
+                <div class="mb-2">
+                    <a>
+                        <p class="underline">{design.frontmatter.title}</p>
+                    </a>
+                    <p class="lowercase mt-1 text-gray-400 text-sm">{design.frontmatter.excrept} ...</p>
+                </div>
+            ))}
+        </div>
+    </div>
 
 </Layout>
 
