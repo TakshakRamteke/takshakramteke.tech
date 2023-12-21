@@ -83,7 +83,7 @@ const allDesigns = await Astro.glob("./designs/*.md")
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
             {allBlogs.slice(0,3).map(blog=>(
                 <div class="mb-2">
-                    <a>
+                    <a href={blog.url}>
                         <p class="underline">{blog.frontmatter.title}</p>
                     </a>
                     <p class="lowercase mt-1 text-gray-400 text-sm">{blog.frontmatter.excrept} ...</p>

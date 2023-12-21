@@ -1,6 +1,6 @@
 ---
 title: "🧪 E2E tests made easy with Cypress + Cucumber"
-layout: "../../layouts/Layout.astro"
+layout: "../../layouts/BlogLayout.astro"
 excrept: "test written in what is called a cucumber (Gherkin) on there own aren't really capable of doing E2E tests And That's where we'll have Cypress comes in to save the day"
 ---
 
@@ -10,11 +10,10 @@ While it may “sound” like daunting task at first what if i tell you that the
 
 ```gherkin
 Feature : Test redirection
-
 Scenario : Test the redirect
-	Given that im on "Home" page
-  When i click "#redirect"
-  Then i should see "Redirected" as "h1"
+    Given that im on "Home" page
+    When i click "#redirect"
+    Then i should see "Redirected" as "h1"
 ```
 
 What you read just now is a fully functional test written in what is called a [Gherkin](https://cucumber.io/docs/gherkin/reference/) syntax used by Cucumber which is a BDD testing tool and its open source ofcourse
@@ -110,9 +109,9 @@ So lets quickly write a feature file first
 
 ```gherkin
 Feature: Google.com
-  Scenario: visting the frontpage
+Scenario: visting the frontpage
     When I visit google.com
-		Then I should see Google as the Title
+    Then I should see Google as the Title
 ```
 
 And that’s it, all this test does is navigate to [google.com](http://google.com) and check whether the title for the website is google or not, simple as that 🙃

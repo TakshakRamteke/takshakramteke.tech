@@ -1,6 +1,6 @@
 ---
 title: "🗿 Get Some Github Actions"
-layout: "../../layouts/Layout.astro"
+layout: "../../layouts/BlogLayout.astro"
 excrept: "GitHub Actions is one of those things that just perfectly embodies rule 34(for devs), think anything of the top of your head and there's a high chance that there's a github action made for it already"
 ---
 
