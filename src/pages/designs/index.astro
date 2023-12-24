@@ -1,19 +1,24 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-const allDesigns = await Astro.glob("./*.md")
+import Layout from "../../layouts/Layout.astro";
+const allDesigns = await Astro.glob("./*.md");
 ---
+
 <Layout title="Designs | Takshak Ramteke">
-    <div class="mb-7">
-        <h1 class="text-2xl font-semibold">Designs</h1>
-    </div>
-    <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
-        {allDesigns.slice(0,3).map(design=>(
-            <div class="mb-2">
-                <a href={design.url}>
-                    <p class="underline">{design.frontmatter.title}</p>
-                </a>
-                <p class="lowercase mt-1 text-gray-400 text-sm">{design.frontmatter.excrept} ...</p>
-            </div>
-        ))}
-    </div>
+  <div class="mb-7">
+    <h1 class="text-2xl font-semibold">Designs</h1>
+  </div>
+  <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
+    {
+      allDesigns.map((design) => (
+        <div class="mb-2">
+          <a href={design.url}>
+            <p class="underline">{design.frontmatter.title}</p>
+          </a>
+          <p class="lowercase mt-1 text-gray-400 text-sm">
+            {design.frontmatter.excrept} ...
+          </p>
+        </div>
+      ))
+    }
+  </div>
 </Layout>

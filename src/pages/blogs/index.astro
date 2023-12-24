@@ -1,21 +1,24 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-const allBlogs = await Astro.glob("./*.md")
+import Layout from "../../layouts/Layout.astro";
+const allBlogs = await Astro.glob("./*.md");
 ---
 
 <Layout title="Blogs | Takshak Ramteke">
-    <div class="mb-7">
-        <h1 class="text-2xl mb-7 font-semibold">Blogs</h1>
-    </div>
-    <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
-        {allBlogs.map(blog=>(
-            <div class="mb-2">
-                <a href={blog.url}>
-                    <p class="underline">{blog.frontmatter.title}</p>
-                </a>
-                <p class="lowercase mt-1 text-gray-400 text-sm">{blog.frontmatter.excrept} ...</p>
-            </div>
-        ))}
-    </div>
-
+  <div class="mb-7">
+    <h1 class="text-2xl mb-7 font-semibold">Blogs</h1>
+  </div>
+  <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
+    {
+      allBlogs.map((blog) => (
+        <div class="mb-2">
+          <a href={blog.url}>
+            <p class="underline">{blog.frontmatter.title}</p>
+          </a>
+          <p class="lowercase mt-1 text-gray-400 text-sm">
+            {blog.frontmatter.excrept} ...
+          </p>
+        </div>
+      ))
+    }
+  </div>
 </Layout>
