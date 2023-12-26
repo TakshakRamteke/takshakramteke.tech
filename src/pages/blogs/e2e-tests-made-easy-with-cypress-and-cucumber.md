@@ -2,6 +2,7 @@
 title: "🧪 E2E tests made easy with Cypress + Cucumber"
 layout: "../../layouts/BlogLayout.astro"
 excrept: "test written in what is called a cucumber (Gherkin) on there own aren't really capable of doing E2E tests And That's where we'll have Cypress comes in to save the day"
+featured: true
 ---
 
 If you're a developer I'm pretty sure end to end testing is something you've heard about a lot
@@ -64,12 +65,12 @@ Now that we have all the basic configuration we need lets start by telling cypre
 import { defineConfig } from "cypress";
 
 export default defineConfig({
-  e2e: {
-    setupNodeEvents(on, config) {
-      //
+    e2e: {
+        setupNodeEvents(on, config) {
+            //
+        },
+        specPattern: "**/*.feature",
     },
-    specPattern: "**/*.feature",
-  },
 });
 ```
 
@@ -124,10 +125,10 @@ And let’s move on to writing the actual spec file for this test, to do that ju
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 When("I visit google.com", () => {
-  cy.visit("<https://google.com>");
+    cy.visit("<https://google.com>");
 });
 Then("I should see Google as the Title", () => {
-  cy.get("title").should("Google");
+    cy.get("title").should("Google");
 });
 ```
 
@@ -166,10 +167,10 @@ The main part is tho happens in the spec file
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 When(`I visit {string}`, (url: string) => {
-  cy.visit(`https://${url}`);
+    cy.visit(`https://${url}`);
 });
 Then(`I should see {string} as the {string}`, (text, target) => {
-  cy.get(location).should("contain", text);
+    cy.get(location).should("contain", text);
 });
 ```
 

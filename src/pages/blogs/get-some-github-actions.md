@@ -2,6 +2,7 @@
 title: "🗿 Get Some Github Actions"
 layout: "../../layouts/BlogLayout.astro"
 excrept: "GitHub Actions is one of those things that just perfectly embodies rule 34(for devs), think anything of the top of your head and there's a high chance that there's a github action made for it already"
+featured: true
 ---
 
 **Github Actions**, If you haven't heard about already then please allow me tell you calling it amazing would be an understatement !
@@ -12,11 +13,11 @@ GitHub Actions is one of those things that just perfectly embodies rule 34(for d
 
 And Im not joking either, there's literally a github action for everything you may need e.g.
 
-- [x] Deploying a next.js app to github pages,
-- [x] making automatic releases,
-- [x] greet a new contributor,
-- [x] setting up entire dev enviornment,
-      And much more !
+-   [x] Deploying a next.js app to github pages,
+-   [x] making automatic releases,
+-   [x] greet a new contributor,
+-   [x] setting up entire dev enviornment,
+        And much more !
 
 And So today in this blog i'd like to ask you to come along with me on a little adventure, as we go through some stuff about github actions and dare i mention try creating one of our very own github action,
 
@@ -101,13 +102,13 @@ description: "An action to get some github action"
 author: "TakshakRamteke@users.noreply.github.com"
 
 inputs:
-  MESSAGE:
-    description: "Message to print out"
-    required: true
+    MESSAGE:
+        description: "Message to print out"
+        required: true
 
 runs:
-  using: "docker"
-  image: "Dockerfile"
+    using: "docker"
+    image: "Dockerfile"
 ```
 
 While I personally think most of this is self explanatory, the super important things to look out for are the inputs and runs,
@@ -127,14 +128,14 @@ name: "A workflow to get some github action"
 on: push
 
 jobs:
-  builds:
-    name: Get some github action
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: ./action
-        with:
-          MESSAGE: "GOT SOME GITHUB ACTION 🏆"
+    builds:
+        name: Get some github action
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - uses: ./action
+              with:
+                  MESSAGE: "GOT SOME GITHUB ACTION 🏆"
 ```
 
 Here, the first line is just the name that we want to give our action and it goes without saying that you can name it whatever you want
@@ -143,14 +144,14 @@ the next line tho is where we specify the event on which this action to trigger 
 
 The next section is where all the magic happens, this part is called the action block and it is in here that we provide info on how to run our action, here's a little breakdown of this section
 
-- `jobs:` is the base component of a workflow
-- `build:` is the identifier we're attaching to this job, you can name it however you like, i called it build because it builds our docker image 🤷
-- `name:` is the name of the job, this is displayed on GitHub when the workflow is running
-- `runs-on:` defines the type of machine to run the job on. By default it is run on a GitHub-hosted runner, you can specify your own as well tho.
-- `steps:` are the _linear_ sequence of operations that make up a job, simple
-- `uses: actions/checkout@v1` uses a community action called [`checkout`](https://github.com/actions/checkout) to allow the workflow to access the contents of the repository
-- `uses: ./action` provides the relative path to the action you created in the `action` directory of your repository
-- `with`: is used to specify the input variables that will be available to your action in the runtime environment. In this case, the input variable is `MESSAGE` and i've assigned it a value of "GOT SOME GITHUB ACTION 🏆"
+-   `jobs:` is the base component of a workflow
+-   `build:` is the identifier we're attaching to this job, you can name it however you like, i called it build because it builds our docker image 🤷
+-   `name:` is the name of the job, this is displayed on GitHub when the workflow is running
+-   `runs-on:` defines the type of machine to run the job on. By default it is run on a GitHub-hosted runner, you can specify your own as well tho.
+-   `steps:` are the _linear_ sequence of operations that make up a job, simple
+-   `uses: actions/checkout@v1` uses a community action called [`checkout`](https://github.com/actions/checkout) to allow the workflow to access the contents of the repository
+-   `uses: ./action` provides the relative path to the action you created in the `action` directory of your repository
+-   `with`: is used to specify the input variables that will be available to your action in the runtime environment. In this case, the input variable is `MESSAGE` and i've assigned it a value of "GOT SOME GITHUB ACTION 🏆"
 
 That's basically a high level overview of each key that we use in this current workflow, not to mention there are quite literally ton of more other option that you can use
 

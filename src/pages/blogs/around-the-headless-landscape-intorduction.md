@@ -2,6 +2,7 @@
 title: "🌐 Around the Headless Landscape - Intorduction"
 layout: "../../layouts/BlogLayout.astro"
 excrept: "Let's embark on a little adventure (whoo) where we'll have a look around all the majour headless cms providers and play with them to see how we can integrate them into our applications"
+featured: true
 ---
 
 **Hey !!!**, Glad to see you there, as you might have guessed this is sort of a little introduction blog for a blog series that i started called [_Around the Headless landscape_]()
