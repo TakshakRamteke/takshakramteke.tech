@@ -1,14 +1,53 @@
 ---
-import Layout from './Layout.astro'
-import { Image } from "astro:assets"
-const {frontmatter} = Astro.props
+import Layout from "./Layout.astro";
+import { Image } from "astro:assets";
+const { frontmatter } = Astro.props;
 ---
+
 <Layout title={frontmatter.title}>
     <div class="mb-4 flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-4 h-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            data-slot="icon"
+            class="w-4 h-4"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
         </svg>
         <a href="/" class="no-underline text-gray-400 ml-1">Back</a>
+    </div>
+
+    <div
+        class={`${
+            frontmatter.images.length !== 1
+                ? "w-[100vw] lg:w-[calc(100vw-20vw)] xl:w-[calc(100vw-30vw)]"
+                : ""
+        }`}
+    >
+        <div
+            class={`flex overflow-x-scroll gap-4 ${
+                frontmatter.images.length === 1
+                    ? "items-center justify-center"
+                    : "p-12 pl-0"
+            }`}
+        >
+            {
+                frontmatter.images.map((image: string) => (
+                    <Image
+                        src={image}
+                        alt={frontmatter.title}
+                        width="595"
+                        height="842"
+                    />
+                ))
+            }
+        </div>
     </div>
 
     <h1 class="font-bold text-3xl md:text-4xl mt-3.5">{frontmatter.title}</h1>
@@ -16,5 +55,4 @@ const {frontmatter} = Astro.props
         <p class="text-gray-400">Takshak Ramteke</p>
     </div>
     <p class="text-gray-400 mb-5">{frontmatter.excrept}</p>
-    <Image src={frontmatter.image} alt={frontmatter.title} width="595" height="842" class='w-full' />
 </Layout>

@@ -1,6 +1,6 @@
 ---
 interface Props {
-  title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -11,53 +11,55 @@ import "@fontsource-variable/inter";
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Creating meaningful, scalable & robust (software) solutions, through experience, collaboration and a repository of skills"
-    />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <meta property="og:title" content="Takshak Ramteke" />
-    <meta property="og:type" content="video.movie" />
-    <meta property="og:url" content="https://takshakramteke.tech" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <main class="min-h-screen max-w-7xl lg:py-32 py-20 mx-auto px-8 md:px-20">
-      <slot />
-    </main>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="Creating meaningful, scalable & robust (software) solutions, through experience, collaboration and a repository of skills"
+        />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <meta property="og:title" content="Takshak Ramteke" />
+        <meta property="og:type" content="video.movie" />
+        <meta property="og:url" content="https://takshakramteke.tech" />
+        <title>{title}</title>
+    </head>
+    <body class="overflow-x-hidden">
+        <main
+            class="min-h-screen max-w-7xl lg:py-32 py-20 mx-auto px-8 md:px-20"
+        >
+            <slot />
+        </main>
+    </body>
 </html>
 <style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: "Inter Variable", sans-serif;
-    background: #161616;
-    background-size: 224px;
-    color: white;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
+    :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(
+            45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 30%,
+            white 60%
+        );
+    }
+    html {
+        font-family: "Inter Variable", sans-serif;
+        background: #161616;
+        background-size: 224px;
+        color: white;
+    }
+    code {
+        font-family:
+            Menlo,
+            Monaco,
+            Lucida Console,
+            Liberation Mono,
+            DejaVu Sans Mono,
+            Bitstream Vera Sans Mono,
+            Courier New,
+            monospace;
+    }
 </style>
