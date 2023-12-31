@@ -33,7 +33,7 @@ const { frontmatter } = Astro.props;
         <div
             class={`flex overflow-x-scroll gap-4 ${
                 frontmatter.images.length === 1
-                    ? "items-center justify-center"
+                    ? "items-center justify-center my-12"
                     : "p-12 pl-0"
             }`}
         >
@@ -42,8 +42,8 @@ const { frontmatter } = Astro.props;
                     <Image
                         src={image}
                         alt={frontmatter.title}
-                        width="595"
-                        height="842"
+                        width={frontmatter.images.length === 1 ? "595" : "540"}
+                        height={frontmatter.images.length === 1 ? "842" : "540"}
                     />
                 ))
             }
